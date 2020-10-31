@@ -98,5 +98,6 @@ The input feature is MFCC 20 , and the output phoneme classes is reduced to 30 c
     # Layer 6 BatchNormalization layer
     model_3.add(BatchNormalization())
     model_3.add(Dropout(rate = 0.1))
+    
     # Layer 7 with softmax activaiton function and units equal umber of classes
     model_3.add(Dense(N, activation='softmax'))
