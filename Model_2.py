@@ -84,21 +84,17 @@ model_2 = Sequential()
 # Layer 1 BatchNormalization layer
 model_2.add(BatchNormalization(input_shape = (880,)))
 
-# Layer 2 with Relu activaiton function
+# Layer 2 with clipped Relu activaiton function
 model_2.add(Dense(256,input_shape=(880,),activation = clipped_relu)) 
 #model_2.add(Activation('relu')) 
 model_2.add(Dropout(0.1)) 
 
-
-# Layer 4 with Relu activaiton function
+# Layer 3 with clipped Relu activaiton function
 model_2.add(Dense(256, activation = clipped_relu)) 
 #model_2.add(Activation('relu')) 
 model_2.add(Dropout(0.1)) 
 
-# Layer 3 Flatten
-#model_2.add(Flatten())
-
-# Layer 6 with softmax activaiton function
+# Layer 4 with softmax activaiton function
 model_2.add(Dense(N)) 
 model_2.add(Activation('softmax')) 
 
