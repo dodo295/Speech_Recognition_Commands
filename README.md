@@ -112,8 +112,10 @@ These models are saved in the Templates folder as an h5 file
             
     Model_3         97.76%                 86.63%
 
-
-
+# Real time Speech Recognition Commands
+I used the three speech recognition models to recognize the speech command performed 
+when a human speaks within just one second once the microphone starts streaming with the pyaudio python library.
+So we obtain the expected resulting speech command by repeated prediction from 3 models
 
 
 
