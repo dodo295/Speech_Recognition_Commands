@@ -74,22 +74,24 @@ K.set_learning_phase(1)
 
 
 model_1 = Sequential()
+# Layer 1 BatchNormalization with input shape of mfcc features
 model_1.add(BatchNormalization(input_shape = (20,44)))
-# Layer 1 with clipped ReLu activation function
+
+# Layer 2 with clipped ReLu activation function
 model_1.add(Dense(512, activation = clipped_relu, input_shape=(20,44)))
 model_1.add(Dropout(rate = 0.1))
 
 
-# Layer 2 with clipped ReLu activation function
+# Layer 3 with clipped ReLu activation function
 model_1.add(Dense(256, activation = clipped_relu))
 model_1.add(Dropout(rate = 0.1))
 
 
-# Layer 4 Bidirectional Recurrent layer with clipped ReLu activtion function
+# Layer 4 Recurrent layer with clipped ReLu activtion function
 model_1.add(SimpleRNN(512, activation = clipped_relu, return_sequences = True))
 model_1.add(Dropout(rate = 0.1))
 
-# Layer 6 Flatten
+# Layer 5 Flatten
 model_1.add(Flatten())
 
 # Layer 6 with softmax activaiton function
