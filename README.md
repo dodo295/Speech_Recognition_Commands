@@ -30,7 +30,8 @@
     • loader.py : Speech pre-processing, including data loading, and very short 
                   waveform stuffing (less than one second),we pad it with zeros, and compute the MFCC feature.
     • These features are saved in Pickle files for each training, validation, and testing dataset.
-   You will find it in the mfcc_feature directory.
+   You will find the test and validation files in the mfcc_feature directory and you can download the train pickle from this link
+   
 # Input & Output
 The input feature is MFCC 20 , and the output phoneme classes is reduced to 30 classes during evaluation.
 
