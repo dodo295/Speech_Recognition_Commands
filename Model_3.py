@@ -58,16 +58,23 @@ X_train, y_train = shuffle(X_train, y_train)
 
 from keras.models import Sequential
 model_3 = Sequential()
+# Layer 1 Flatten layer with 2D mfcc feature
 model_3.add(Flatten(input_shape=(20, 44)))
+# Layer 2 BatchNormalization layer
 model_3.add(BatchNormalization())
 model_3.add(Dropout(rate = 0.1))
+# Layer 3 with Relu activaiton function
 model_3.add(Dense(1024, activation = 'relu'))
 model_3.add(Dropout(rate = 0.1))
+# Layer 4 BatchNormalization layer
 model_3.add(BatchNormalization())
 model_3.add(Dropout(rate = 0.1))
+# Layer 5 with Relu activaiton function
 model_3.add(Dense(512, activation = 'relu'))
 model_3.add(Dropout(rate = 0.1))
+# Layer 6 BatchNormalization layer
 model_3.add(BatchNormalization())
+# Layer 7 with softmax activaiton function and units equal umber of classes
 model_3.add(Dropout(rate = 0.1))
 model_3.add(Dense(N, activation='softmax'))
 model_3.compile(loss="categorical_crossentropy",
