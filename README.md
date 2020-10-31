@@ -32,3 +32,27 @@
    You will find it in the mfcc_feature directory.
 # Input & Output
 The input feature is MFCC 20 , and the output phoneme classes is reduced to 30 classes during evaluation.
+
+# Models
+   • First Model
+    
+    #Layer 1 BatchNormalization with input shape of mfcc features
+    model_1.add(BatchNormalization(input_shape = (20,44)))
+    
+    #Layer 2 with clipped ReLu activation function
+    model_1.add(Dense(512, activation = clipped_relu, input_shape=(20,44)))
+    model_1.add(Dropout(rate = 0.1))
+    
+    #Layer 3 with clipped ReLu activation function
+    model_1.add(Dense(256, activation = clipped_relu))
+    model_1.add(Dropout(rate = 0.1))
+    
+    #Layer 4 Recurrent layer with clipped ReLu activtion function
+    model_1.add(SimpleRNN(512, activation = clipped_relu, return_sequences = True))
+    model_1.add(Dropout(rate = 0.1))
+    
+    #Layer 5 Flatten
+    model_1.add(Flatten())
+    
+    #Layer 6 with softmax activaiton function and units equal umber of classes
+    model_1.add(Dense(units = 30, activation = "softmax"))
