@@ -6,7 +6,7 @@
       of different speakers. The audio files are organized into folders based on the word they contain, 
       and this data set is designed to help train simple machine learning models.
 
-    • Its original location was at http://download.tensorflow.org/data/speech_commands_v0.01.tar.gz.
+    • Its original location was at http://download.tensorflow.org/data/speech_commands_v0.01.tar.gz
 
    • Data Coverage
       
@@ -22,7 +22,6 @@
    • Data Split
       
       Train – 51,088 audio clips, Validation – 6,798 audio clips, Test – 6,835 audio clips
-
 
 # Speech Feature Extraction
    • MFCC: Mel-frequency cepstral coefficients calculation
