@@ -22,13 +22,13 @@
 
    • Data Split
       
-      Train – 51,088 audio clips, Validation – 6,798 audio clips, Test – 6,835 audio clips
+      Train – 51,088 audio clips, Validation – 6,798 audio clips, Test – 6,835 audio clips.
 
 # Speech Feature Extraction
    • MFCC: Mel-frequency cepstral coefficients calculation
       
     • loader.py : Speech pre-processing, including data loading, and very short 
-    waveform stuffing (less than one second),we pad it with zeros, and compute the MFCC feature.
+                  waveform stuffing (less than one second),we pad it with zeros, and compute the MFCC feature.
     • These features are saved in Pickle files for each training, validation, and testing dataset.
    You will find it in the mfcc_feature directory.
 # Input & Output
@@ -102,7 +102,7 @@ The input feature is MFCC 20 , and the output phoneme classes is reduced to 30 c
     
     # Layer 7 with softmax activaiton function and units equal umber of classes
     model_3.add(Dense(N, activation='softmax'))
-These models are saved in the Templates folder as an h5 file
+These models are saved in the Templates folder as an h5 file.
  
                 Training Accuracy      Testing Accuracy 
                         
@@ -117,8 +117,8 @@ These models are saved in the Templates folder as an h5 file
     I used the three speech recognition models to recognize the speech command performed 
     when a human speaks within just one second once the microphone starts streaming 
     with the pyaudio python library.
-    So we obtain the expected resulting speech command by repeated prediction from 3 models
-You will find it in main.py file
+    So we obtain the expected resulting speech command by repeated prediction from 3 models.
+You will find it in main.py file.
 
 
 
