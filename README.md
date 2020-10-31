@@ -73,3 +73,30 @@ The input feature is MFCC 20 , and the output phoneme classes is reduced to 30 c
     # Layer 4 with softmax activaiton function and units equal umber of classes
     model_2.add(Dense(N)) 
     model_2.add(Activation('softmax')) 
+
+• Third Model
+    
+    # Layer 1 Flatten layer with 2D mfcc feature
+    model_3.add(Flatten(input_shape=(20, 44)))
+    
+    # Layer 2 BatchNormalization layer
+    model_3.add(BatchNormalization())
+    model_3.add(Dropout(rate = 0.1))
+    
+    # Layer 3 with Relu activaiton function
+    model_3.add(Dense(1024, activation = 'relu'))
+    model_3.add(Dropout(rate = 0.1))
+    
+    # Layer 4 BatchNormalization layer
+    model_3.add(BatchNormalization())
+    model_3.add(Dropout(rate = 0.1))
+    
+    # Layer 5 with Relu activaiton function
+    model_3.add(Dense(512, activation = 'relu'))
+    model_3.add(Dropout(rate = 0.1))
+    
+    # Layer 6 BatchNormalization layer
+    model_3.add(BatchNormalization())
+    model_3.add(Dropout(rate = 0.1))
+    # Layer 7 with softmax activaiton function and units equal umber of classes
+    model_3.add(Dense(N, activation='softmax'))
