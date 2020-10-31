@@ -34,7 +34,7 @@
 The input feature is MFCC 20 , and the output phoneme classes is reduced to 30 classes during evaluation.
 
 # Models
-• First Model
+• First Model (Model_1.py)
     
     #Layer 1 BatchNormalization with input shape of mfcc features
     model_1.add(BatchNormalization(input_shape = (20,44)))
@@ -57,7 +57,7 @@ The input feature is MFCC 20 , and the output phoneme classes is reduced to 30 c
     #Layer 6 with softmax activaiton function and units equal umber of classes
     model_1.add(Dense(units = 30, activation = "softmax"))
     
-• Second Model
+• Second Model (Model_2.py)
     
     # Layer 1 BatchNormalization layer with 1D mfcc feature
     model_2.add(BatchNormalization(input_shape = (880,)))
@@ -74,7 +74,7 @@ The input feature is MFCC 20 , and the output phoneme classes is reduced to 30 c
     model_2.add(Dense(N)) 
     model_2.add(Activation('softmax')) 
 
-• Third Model
+• Third Model (Model_3.py)
     
     # Layer 1 Flatten layer with 2D mfcc feature
     model_3.add(Flatten(input_shape=(20, 44)))
