@@ -86,12 +86,10 @@ model_2.add(BatchNormalization(input_shape = (880,)))
 
 # Layer 2 with clipped Relu activaiton function
 model_2.add(Dense(256,input_shape=(880,),activation = clipped_relu)) 
-#model_2.add(Activation('relu')) 
 model_2.add(Dropout(0.1)) 
 
 # Layer 3 with clipped Relu activaiton function
 model_2.add(Dense(256, activation = clipped_relu)) 
-#model_2.add(Activation('relu')) 
 model_2.add(Dropout(0.1)) 
 
 # Layer 4 with softmax activaiton function
