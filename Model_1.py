@@ -79,20 +79,18 @@ model_1.add(BatchNormalization(input_shape = (20,44)))
 model_1.add(Dense(512, activation = clipped_relu, input_shape=(20,44)))
 model_1.add(Dropout(rate = 0.1))
 
-
 # Layer 2 with clipped ReLu activation function
 model_1.add(Dense(256, activation = clipped_relu))
 model_1.add(Dropout(rate = 0.1))
 
-
-# Layer 4 Bidirectional Recurrent layer with clipped ReLu activtion function
+# Layer 3 Recurrent layer with clipped ReLu activtion function
 model_1.add(SimpleRNN(512, activation = clipped_relu, return_sequences = True))
 model_1.add(Dropout(rate = 0.1))
 
-# Layer 6 Flatten
+# Layer 4 Flatten
 model_1.add(Flatten())
 
-# Layer 6 with softmax activaiton function
+# Layer 5 with softmax activaiton function and units equal the number of classes
 model_1.add(Dense(units = 30, activation = "softmax"))
 
 # Compiling the model
