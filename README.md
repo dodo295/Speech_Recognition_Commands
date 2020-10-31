@@ -32,7 +32,7 @@
                   and compute the MFCC feature.
     • These features are saved in Pickle files for each training, validation, and testing dataset.
    You will find the test and validation files in the mfcc_feature directory and you can download
-   the train pickle from this link
+   the train pickle from this link https://drive.google.com/file/d/1WRHmXAPFMHimIaNdgyHBbVKS5xnTpC0d/view?usp=sharing
    
 # Input & Output
 The input feature is MFCC 20 , and the output phoneme classes is reduced to 30 classes during evaluation.
