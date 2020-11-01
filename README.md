@@ -59,8 +59,8 @@
       
  • Clipped ReLU Activation
  
-      The Clipped ReLU is a review of ReLU. It presents a coefficient of α> 0. Its product for each element
-      greater than α is α. Hence, Clipped ReLU limits the output to {0, α}.
+    The Clipped ReLU is a review of ReLU. It presents a coefficient of α> 0. Its product for each element
+    greater than α is α. Hence, Clipped ReLU limits the output to {0, α}.
 
 # Models
 • First Model (Model_1.py)
