@@ -42,8 +42,13 @@
    You will find the test and validation files in the mfcc_feature directory and you can download
    the train pickle from this link https://drive.google.com/file/d/1WRHmXAPFMHimIaNdgyHBbVKS5xnTpC0d/view?usp=sharing
    
-# Input & Output
-• The input feature is MFCC 20 , and the output phoneme classes is reduced to 30 classes during evaluation.
+# Description of Model Layers
+• Input
+
+    I use MFCC as the model’s input features. It consists of 20-dimensional MFCC.
+• Output
+
+    The output phoneme classes is reduced to 30 classes during evaluation.
 
 • Batchnormalization Layer
 
