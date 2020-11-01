@@ -59,8 +59,8 @@
       this internal covariate transformation by introducing a normalization step that ﬁxes the
       means and variances of layer inputs.
     
-    • Batch Normalization (BN) is widely used in deep learning and is significantly improving in many tasks.
-      It helps accelerate training speed and greatly improve performance.
+    • Batch Normalization (BN) is widely used in deep learning and is significantly improving
+      in many tasks. It helps accelerate training speed and greatly improve performance.
       In this work,I use BN sometimes after each layer and sometimes only at the beginning.
       
  • Clipped ReLU Activation
