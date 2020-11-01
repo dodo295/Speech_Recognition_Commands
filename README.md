@@ -56,6 +56,11 @@
     • Batch Normalization (BN) is widely used in deep learning and is significantly improving in many tasks.
       It helps accelerate training speed and greatly improve performance.
       In this work,I use BN sometimes after each layer and sometimes only at the beginning.
+      
+ • Clipped ReLU Activation
+ 
+      The Clipped ReLU is a review of ReLU. It presents a coefficient of α> 0. Its product for each element
+      greater than α is α. Hence, Clipped ReLU limits the output to {0, α}.
 
 # Models
 • First Model (Model_1.py)
