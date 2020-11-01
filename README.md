@@ -43,7 +43,19 @@
    the train pickle from this link https://drive.google.com/file/d/1WRHmXAPFMHimIaNdgyHBbVKS5xnTpC0d/view?usp=sharing
    
 # Input & Output
-The input feature is MFCC 20 , and the output phoneme classes is reduced to 30 classes during evaluation.
+• The input feature is MFCC 20 , and the output phoneme classes is reduced to 30 classes during evaluation.
+
+• Batchnormalization Layer
+
+    • Training of deep neural networks is complicated by the fact that the input distribution
+      of each layer changes during training, as the parameters of the previous layers change. 
+    
+    • This change was defined as an endogenous shift. Batchnormalization is designed to mitigate this internal covariate
+      transformation by introducing a normalization step that ﬁxes the means and variances of layer inputs.
+    
+    • Batch Normalization (BN) is widely used in deep learning and is significantly improving in many tasks.
+      It helps accelerate training speed and greatly improve performance.
+      In this work,I use BN sometimes after each layer and sometimes only at the beginning.
 
 # Models
 • First Model (Model_1.py)
