@@ -26,6 +26,14 @@
 
 # Speech Feature Extraction
    • MFCC: Mel-frequency cepstral coefficients calculation
+   
+     MFCC feature extraction technology is less complicated to implement, more effective and robust
+     under various conditions, and with the help of this technique we can normalize features as well,
+     which is a very popular technique for recognizing isolated words in English language.
+     Features are extracted based on the information that is included in the speech signal.
+     
+   • The MFCC approach is used in this project to extract features from the speech signal for spoken words.
+
       
     • loader.py : Speech pre-processing, including data loading, and very short 
                   waveform stuffing (less than one second),we pad it with zeros,
