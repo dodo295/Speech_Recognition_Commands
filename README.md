@@ -55,8 +55,9 @@
     • Training of deep neural networks is complicated by the fact that the input distribution
       of each layer changes during training, as the parameters of the previous layers change. 
     
-    • This change was defined as an endogenous shift. Batchnormalization is designed to mitigate this internal covariate
-      transformation by introducing a normalization step that ﬁxes the means and variances of layer inputs.
+    • This change was defined as an endogenous shift. Batchnormalization is designed to mitigate
+      this internal covariate transformation by introducing a normalization step that ﬁxes the
+      means and variances of layer inputs.
     
     • Batch Normalization (BN) is widely used in deep learning and is significantly improving in many tasks.
       It helps accelerate training speed and greatly improve performance.
@@ -64,8 +65,8 @@
       
  • Clipped ReLU Activation
  
-    The Clipped ReLU is a review of ReLU. It presents a coefficient of α> 0. Its product for each element
-    greater than α is α. Hence, Clipped ReLU limits the output to {0, α}.
+    The Clipped ReLU is a review of ReLU. It presents a coefficient of α> 0. Its product for each
+    element greater than α is α. Hence, Clipped ReLU limits the output to {0, α}.
 
 # Models
 • First Model (Model_1.py)
