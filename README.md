@@ -7,7 +7,7 @@
       of different speakers. The audio files are organized into folders based on the word they contain, 
       and this data set is designed to help train simple machine learning models.
 
-    • Its original location was at http://download.tensorflow.org/data/speech_commands_v0.01.tar.gz
+   • Its original location was at [(Click here)] (http://download.tensorflow.org/data/speech_commands_v0.01.tar.gz)
 
    • Data Coverage
       
@@ -40,7 +40,7 @@
                   and compute the MFCC feature.
     • These features are saved in Pickle files for each training, validation, and testing dataset.
    You will find the test and validation files in the mfcc_feature directory and you can download
-   the train pickle from this link https://drive.google.com/file/d/1WRHmXAPFMHimIaNdgyHBbVKS5xnTpC0d/view?usp=sharing
+   the train pickle from this link:[(Click here)] (https://drive.google.com/file/d/1WRHmXAPFMHimIaNdgyHBbVKS5xnTpC0d/view?usp=sharing)
    
 # Description of Model Layers
 • Input
@@ -138,12 +138,10 @@
     model_3.add(Dense(N, activation='softmax'))
 These models are saved in the Templates folder as an h5 file.
  
-   Doaa   |  Training Accuracy | Testing Accuracy 
+   Model   |  Training Accuracy | Testing Accuracy 
    --------|--------------------|--------------------------------
    Model_1 | 88.8%   | 82.96%
-
    Model_2   | 92.05% |  83.57%
-            
    Model_3   | 97.76%  |   86.63%
     
 
@@ -154,10 +152,4 @@ These models are saved in the Templates folder as an h5 file.
     with the pyaudio python library.
     So we obtain the expected resulting speech command by repeated prediction from 3 models.
 You will find it in main.py file.
-
-
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
 
