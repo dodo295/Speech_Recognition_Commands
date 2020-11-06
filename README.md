@@ -7,7 +7,7 @@
       of different speakers. The audio files are organized into folders based on the word they contain, 
       and this data set is designed to help train simple machine learning models.
 
-   • Its original location was at[(Click here)](http://download.tensorflow.org/data/speech_commands_v0.01.tar.gz)
+   • Its original location was at[Click here](http://download.tensorflow.org/data/speech_commands_v0.01.tar.gz)
 
    • **Data Coverage**
       
@@ -40,7 +40,7 @@
                   and compute the MFCC feature.
     • These features are saved in Pickle files for each training, validation, and testing dataset.
    You will find the test and validation files in the mfcc_feature directory and you can download
-   the train pickle from this link:[(Click here)](https://drive.google.com/file/d/1WRHmXAPFMHimIaNdgyHBbVKS5xnTpC0d/view?usp=sharing)
+   the train pickle from this link:[Click here](https://drive.google.com/file/d/1WRHmXAPFMHimIaNdgyHBbVKS5xnTpC0d/view?usp=sharing)
    
 # Description of Model Layers
 • **Input**
@@ -137,9 +137,8 @@
     # Layer 7 with softmax activaiton function and units equal umber of classes
     model_3.add(Dense(N, activation='softmax'))
 
-**These models are saved in the Templates folder as an h5 file.**
- 
-   **Model   |  Training Accuracy | Testing Accuracy 
+**These models are saved in the Templates folder as an h5 file.
+   Model   |  Training Accuracy | Testing Accuracy 
    --------|--------------------|--------------------------------
    Model_1 | 88.8%   | 82.96%
    Model_2   | 92.05% |  83.57%
