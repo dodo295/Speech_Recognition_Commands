@@ -1,5 +1,5 @@
 # Dataset
-   • Speech Commands Data Set v0.01
+   • **Speech Commands Data Set v0.01**
       
       This dataset containing 64,727 audio files, released on August 3rd 2017. 
       This is a set of one-second .wav audio files,each containing a single spoken English word.
@@ -9,7 +9,7 @@
 
    • Its original location was at[(Click here)](http://download.tensorflow.org/data/speech_commands_v0.01.tar.gz)
 
-   • Data Coverage
+   • **Data Coverage**
       
       20 of the words are core words, while 10 words are auxiliary words that
       could act as tests for algorithms in ignoring speeches that do not contain triggers. 
@@ -20,12 +20,12 @@
     • Auxiliary words: Bed, Bird, Cat, Dog, Happy, House, Marvin, Sheila, Tree, and Wow.
 
 
-   • Data Split
+   • **Data Split**
       
       Train – 51,088 audio clips, Validation – 6,798 audio clips, Test – 6,835 audio clips.
 
 # Speech Feature Extraction
-   • MFCC: Mel-frequency cepstral coefficients calculation
+   • **MFCC**: Mel-frequency cepstral coefficients calculation
    
      MFCC feature extraction technology is less complicated to implement, more effective and robust
      under various conditions, and with the help of this technique we can normalize features as well,
@@ -43,14 +43,14 @@
    the train pickle from this link:[(Click here)](https://drive.google.com/file/d/1WRHmXAPFMHimIaNdgyHBbVKS5xnTpC0d/view?usp=sharing)
    
 # Description of Model Layers
-• Input
+• **Input**
 
     I use MFCC as the model’s input features. It consists of 20-dimensional MFCC.
-• Output
+• **Output**
 
     The output phoneme classes is reduced to 30 classes during evaluation.
 
-• Batchnormalization Layer
+• **Batchnormalization Layer**
 
     • Training of deep neural networks is complicated by the fact that the input distribution
       of each layer changes during training, as the parameters of the previous layers change. 
@@ -63,13 +63,13 @@
       in many tasks. It helps accelerate training speed and greatly improve performance.
       In this work,I use BN sometimes after each layer and sometimes only at the beginning.
       
- • Clipped ReLU Activation
+ • **Clipped ReLU Activation**
  
     The Clipped ReLU is a review of ReLU. It presents a coefficient of α> 0. Its product for each
     element greater than α is α. Hence, Clipped ReLU limits the output to {0, α}.
 
 # Models
-• First Model (Model_1.py)
+• **First Model (Model_1.py)**
     
     #Layer 1 BatchNormalization with input shape of mfcc features
     model_1.add(BatchNormalization(input_shape = (20,44)))
@@ -92,7 +92,7 @@
     #Layer 6 with softmax activaiton function and units equal umber of classes
     model_1.add(Dense(units = 30, activation = "softmax"))
     
-• Second Model (Model_2.py)
+• **Second Model (Model_2.py)**
     
     # Layer 1 BatchNormalization layer with 1D mfcc feature
     model_2.add(BatchNormalization(input_shape = (880,)))
@@ -109,7 +109,7 @@
     model_2.add(Dense(N)) 
     model_2.add(Activation('softmax')) 
 
-• Third Model (Model_3.py)
+• **Third Model (Model_3.py)**
     
     # Layer 1 Flatten layer with 2D mfcc feature
     model_3.add(Flatten(input_shape=(20, 44)))
@@ -136,9 +136,10 @@
     
     # Layer 7 with softmax activaiton function and units equal umber of classes
     model_3.add(Dense(N, activation='softmax'))
-These models are saved in the Templates folder as an h5 file.
+
+**These models are saved in the Templates folder as an h5 file.**
  
-   Model   |  Training Accuracy | Testing Accuracy 
+   **Model   |  Training Accuracy | Testing Accuracy 
    --------|--------------------|--------------------------------
    Model_1 | 88.8%   | 82.96%
    Model_2   | 92.05% |  83.57%
