@@ -155,5 +155,8 @@ These models are saved in the Templates folder as an h5 file.
 You will find it in main.py file.
 
 
-
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
 
