@@ -138,7 +138,7 @@
     model_3.add(Dense(N, activation='softmax'))
 These models are saved in the Templates folder as an h5 file.
  
-   |  Training Accuracy | Testing Accuracy 
+   Doaa   |  Training Accuracy | Testing Accuracy 
    ------------------------------------------------------------
    Model_1 | 88.8%   | 82.96%
 
