@@ -137,12 +137,12 @@
     # Layer 7 with softmax activaiton function and units equal umber of classes
     model_3.add(Dense(N, activation='softmax'))
 
-**These models are saved in the Templates folder as an h5 file.
+**These models are saved in the Templates folder as an h5 file.**
    Model   |  Training Accuracy | Testing Accuracy 
    --------|--------------------|--------------------------------
    Model_1 | 88.8%   | 82.96%
    Model_2   | 92.05% |  83.57%
-   Model_3   | 97.76%  |   86.63%**
+   Model_3   | 97.76%  |   86.63%
 
 # Real-time Speech Recognition Commands
 
